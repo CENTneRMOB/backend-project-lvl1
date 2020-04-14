@@ -1,3 +1,8 @@
 #!/usr/bin/env node
-console.log('Welcome to the Brain Games!');
+
 import userName from '../src/index.js';
+
+const Greeting = userName;
+console.log(Greeting);
+
+console.log('Welcome to the Brain Games!');
