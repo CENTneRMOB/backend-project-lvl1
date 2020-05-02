@@ -1,8 +1,5 @@
 #!/usr/bin/env node
 
-import { userName, askNumber } from '../src/index.js';
+import brainEvenGame from '../games/even.js';
 
-console.log(`Hello,${userName}!`);
-console.log('Answer "yes" if the number is even, otherwise answer "no"');
-
-askNumber();
+brainEvenGame();
