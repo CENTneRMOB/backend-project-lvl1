@@ -9,6 +9,10 @@ console.log(greeting);
 const userName = readlineSync.question('May I have your name? ');
 //
 
+// generate random number + min & max borders
+const getRandomNumber = (min, max) => Math.round(Math.random() * (max - min) + min);
+//
+
 // game counts
 const gameCounts = 3;
 //
@@ -32,5 +36,5 @@ const gamesLogic = (askAndRightAnswer) => {
 //
 
 export {
-  userName, gamesLogic,
+  userName, gamesLogic, getRandomNumber,
 };

@@ -1,14 +1,9 @@
 import {
-  userName, gamesLogic,
+  userName, gamesLogic, getRandomNumber,
 } from '../src/index.js';
 
 console.log(`Hello,${userName}!`);
 console.log('Answer "yes" if the number is even, otherwise answer "no"');
-
-
-// generate random number(askingFunc)
-const getRandomNumber = (min = 1, max = 100) => Math.round(Math.random() * (max - min) + min);
-//
 
 // correction check func
 const isEven = (num) => {
@@ -22,7 +17,7 @@ const isEven = (num) => {
 
 // export data
 const askAndRightAnswer = () => {
-  const ask = getRandomNumber();
+  const ask = getRandomNumber(1, 100);
   const rightAnswer = isEven(ask);
   return [ask, rightAnswer];
 };

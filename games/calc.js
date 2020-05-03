@@ -1,19 +1,15 @@
 import {
-  userName, gamesLogic,
+  userName, gamesLogic, getRandomNumber,
 } from '../src/index.js';
 
 console.log(`Hello,${userName}!`);
 console.log('What is the result of the expression?');
 
-// generate random number + min & max borders
-const getRandomNumber = (min = 1, max = 25) => Math.round(Math.random() * (max - min) + min);
-//
-
 // generate random expression(askingFunc)
 const getRandomExpression = () => {
   const operands = ['+', '-', '*'];
   const randomOperand = operands[Math.round(Math.random() * (operands.length - 1))];
-  return `${getRandomNumber()} ${randomOperand} ${getRandomNumber()}`;
+  return `${getRandomNumber(1, 25)} ${randomOperand} ${getRandomNumber(1, 25)}`;
 };
 //
 
