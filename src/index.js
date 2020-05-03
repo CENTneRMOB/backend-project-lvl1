@@ -9,7 +9,7 @@ console.log(greeting);
 const userName = readlineSync.question('May I have your name? ');
 //
 
-// generate random number + min & max borders
+// generate random number
 const getRandomNumber = (min, max) => Math.round(Math.random() * (max - min) + min);
 //
 
