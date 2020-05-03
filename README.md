@@ -14,3 +14,6 @@ Brain-Gcd Game
 
 Brain-Progression Game
 [![asciicast](https://asciinema.org/a/4Il1Ce356QPfc2k8JD21AzGpH.svg)](https://asciinema.org/a/4Il1Ce356QPfc2k8JD21AzGpH)
+
+Brain-Prime Game
+[![asciicast](https://asciinema.org/a/Leu50ML4qg9KCT3riglmLCWR2.svg)](https://asciinema.org/a/Leu50ML4qg9KCT3riglmLCWR2)
