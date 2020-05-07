@@ -1,9 +1,10 @@
 import {
-  userName, gamesLogic, getRandomNumber,
+  gamesLogic, getRandomNumber,
 } from '../src/index.js';
 
-console.log(`Hello,${userName}!`);
-console.log('What is the result of the expression?');
+// game task
+const task = 'What is the result of the expression?';
+//
 
 // generate random expression(askingFunc)
 const getRandomExpression = () => {
@@ -44,6 +45,6 @@ const askAndRightAnswer = () => {
 };
 //
 
-const brainCalcGame = () => gamesLogic(askAndRightAnswer);
+const brainCalcGame = () => gamesLogic(task, askAndRightAnswer);
 
 export default brainCalcGame;

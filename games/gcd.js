@@ -1,38 +1,34 @@
 import {
-  userName, gamesLogic, getRandomNumber,
+  gamesLogic, getRandomNumber,
 } from '../src/index.js';
 
-console.log(`Hello,${userName}!`);
-console.log('Find the greatest common divisor of given numbers.');
-
-// generate random numbers(askingFunc)
-const getRandomNumbers = () => `${getRandomNumber(1, 100)} ${getRandomNumber(1, 100)}`;
+// game task
+const task = 'Find the greatest common divisor of given numbers.';
 //
 
 // correction check func
-const gcd = (str) => {
-  const arr = str.split(' ');
-  const n1 = arr[0];
-  const n2 = arr[1];
+const gcd = (n1, n2) => {
   let div = n1;
   while (div !== 0) {
     if (n1 % div === 0 && n2 % div === 0) {
-      return String(div);
+      return div;
     }
     div -= 1;
   }
-  return String(div);
+  return div;
 };
 //
 
 // export data
 const askAndRightAnswer = () => {
-  const ask = getRandomNumbers();
-  const rightAnswer = gcd(ask);
+  const firstNumber = getRandomNumber(1, 100);
+  const secondNumber = getRandomNumber(1, 100);
+  const ask = `${firstNumber} ${secondNumber}`;
+  const rightAnswer = String(gcd(firstNumber, secondNumber));
   return [ask, rightAnswer];
 };
 //
 
-const brainGcdGame = () => gamesLogic(askAndRightAnswer);
+const brainGcdGame = () => gamesLogic(task, askAndRightAnswer);
 
 export default brainGcdGame;

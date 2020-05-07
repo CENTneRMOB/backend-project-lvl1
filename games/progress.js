@@ -1,9 +1,10 @@
 import {
-  userName, gamesLogic, getRandomNumber,
+  gamesLogic, getRandomNumber,
 } from '../src/index.js';
 
-console.log(`Hello,${userName}!`);
-console.log('What number is missing in the progression?');
+// game task
+const task = 'What number is missing in the progression?';
+//
 
 // generate random string(askingFunc)
 const getRandomString = () => {
@@ -27,6 +28,6 @@ const getRandomString = () => {
 };
 //
 
-const brainPrgGame = () => gamesLogic(getRandomString);
+const brainPrgGame = () => gamesLogic(task, getRandomString);
 
 export default brainPrgGame;

@@ -1,9 +1,10 @@
 import {
-  userName, gamesLogic, getRandomNumber,
+  gamesLogic, getRandomNumber,
 } from '../src/index.js';
 
-console.log(`Hello,${userName}!`);
-console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+// game task
+const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+//
 
 // correction check func
 const isPrime = (num) => {
@@ -29,6 +30,6 @@ const askAndRightAnswer = () => {
 };
 //
 
-const brainPrimeGame = () => gamesLogic(askAndRightAnswer);
+const brainPrimeGame = () => gamesLogic(task, askAndRightAnswer);
 
 export default brainPrimeGame;

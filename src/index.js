@@ -1,12 +1,12 @@
 import readlineSync from 'readline-sync';
 
-// user greeting
-const greeting = 'Welcome to the Brain Games!';
-console.log(greeting);
-//
-
-// user name input
-const userName = readlineSync.question('May I have your name? ');
+// greeting
+const greeting = () => {
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello,${userName}!`);
+  return userName;
+};
 //
 
 // generate random number
@@ -18,7 +18,9 @@ const gameCounts = 3;
 //
 
 // game logic
-const gamesLogic = (askAndRightAnswer) => {
+const gamesLogic = (task, askAndRightAnswer) => {
+  const userName = greeting();
+  console.log(task);
   for (let i = 0; i < gameCounts; i += 1) {
     const [ask, rightAnswer] = askAndRightAnswer();
     console.log(`Question: ${ask}`);
@@ -36,5 +38,5 @@ const gamesLogic = (askAndRightAnswer) => {
 //
 
 export {
-  userName, gamesLogic, getRandomNumber,
+  gamesLogic, getRandomNumber, greeting,
 };
