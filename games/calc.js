@@ -8,43 +8,43 @@ const task = 'What is the result of the expression?';
 
 // generate random expression(askingFunc)
 const getRandomExpression = () => {
-  const operands = ['+', '-', '*'];
-  const randomOperand = operands[Math.round(Math.random() * (operands.length - 1))];
-  return `${getRandomNumber(1, 25)} ${randomOperand} ${getRandomNumber(1, 25)}`;
+  const operations = ['+', '-', '*'];
+  const randomOperation = operations[getRandomNumber(0, operations.length - 1)];
+  const firstNumberForExpression = getRandomNumber(1, 25);
+  const secondNumberForExpression = getRandomNumber(1, 25);
+  return [firstNumberForExpression, randomOperation, secondNumberForExpression];
 };
 //
 
 // correction check func
-const calc = (str) => {
-  const arr = str.split(' ');
-  arr[0] = Number(arr[0]);
-  arr[2] = Number(arr[2]);
+const calc = (expression) => {
   let result;
-  switch (arr[1]) {
+  switch (expression[1]) {
     case '+':
-      result = arr[0] + arr[2];
+      result = expression[0] + expression[2];
       break;
     case '-':
-      result = arr[0] - arr[2];
+      result = expression[0] - expression[2];
       break;
     case '*':
-      result = arr[0] * arr[2];
+      result = expression[0] * expression[2];
       break;
     default:
-      result = NaN;
+      result = false;
   }
-  return String(result);
+  return result;
 };
   //
 
 // export data
-const askAndRightAnswer = () => {
-  const ask = getRandomExpression();
-  const rightAnswer = calc(ask);
-  return [ask, rightAnswer];
+const questionAndRightAnswer = () => {
+  const expression = getRandomExpression();
+  const question = expression.join(' ');
+  const rightAnswer = String(calc(expression));
+  return [question, rightAnswer];
 };
 //
 
-const brainCalcGame = () => gamesLogic(task, askAndRightAnswer);
+const brainCalcGame = () => gamesLogic(task, questionAndRightAnswer);
 
 export default brainCalcGame;

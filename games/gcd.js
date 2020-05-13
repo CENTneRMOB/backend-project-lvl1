@@ -7,28 +7,28 @@ const task = 'Find the greatest common divisor of given numbers.';
 //
 
 // correction check func
-const gcd = (n1, n2) => {
-  let div = n1;
-  while (div !== 0) {
-    if (n1 % div === 0 && n2 % div === 0) {
-      return div;
+const getGreatestCommonDivider = (num1, num2) => {
+  let divider = num1;
+  while (divider !== 0) {
+    if (num1 % divider === 0 && num2 % divider === 0) {
+      return divider;
     }
-    div -= 1;
+    divider -= 1;
   }
-  return div;
+  return divider;
 };
 //
 
 // export data
-const askAndRightAnswer = () => {
+const questionAndRightAnswer = () => {
   const firstNumber = getRandomNumber(1, 100);
   const secondNumber = getRandomNumber(1, 100);
-  const ask = `${firstNumber} ${secondNumber}`;
-  const rightAnswer = String(gcd(firstNumber, secondNumber));
-  return [ask, rightAnswer];
+  const question = `${firstNumber} ${secondNumber}`;
+  const rightAnswer = String(getGreatestCommonDivider(firstNumber, secondNumber));
+  return [question, rightAnswer];
 };
 //
 
-const brainGcdGame = () => gamesLogic(task, askAndRightAnswer);
+const brainGcdGame = () => gamesLogic(task, questionAndRightAnswer);
 
 export default brainGcdGame;

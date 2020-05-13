@@ -8,28 +8,28 @@ const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 // correction check func
 const isPrime = (num) => {
-  if (num === 1) {
-    return 'no';
+  if (num < 2) {
+    return false;
   }
   let div = 2;
   while (div < num) {
     if (num % div === 0) {
-      return 'no';
+      return false;
     }
     div += 1;
   }
-  return 'yes';
+  return true;
 };
 //
 
 // export data
-const askAndRightAnswer = () => {
-  const ask = getRandomNumber(1, 3572);
-  const rightAnswer = isPrime(ask);
-  return [ask, rightAnswer];
+const questionAndRightAnswer = () => {
+  const question = getRandomNumber(1, 3572);
+  const rightAnswer = isPrime(question) ? 'yes' : 'no';
+  return [question, rightAnswer];
 };
 //
 
-const brainPrimeGame = () => gamesLogic(task, askAndRightAnswer);
+const brainPrimeGame = () => gamesLogic(task, questionAndRightAnswer);
 
 export default brainPrimeGame;

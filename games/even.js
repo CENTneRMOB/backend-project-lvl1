@@ -11,13 +11,13 @@ const isEven = (num) => num % 2 === 0;
 //
 
 // export data
-const askAndRightAnswer = () => {
-  const ask = getRandomNumber(1, 100);
-  const rightAnswer = isEven(ask) ? 'yes' : 'no';
-  return [ask, rightAnswer];
+const questionAndRightAnswer = () => {
+  const question = getRandomNumber(1, 100);
+  const rightAnswer = isEven(question) ? 'yes' : 'no';
+  return [question, rightAnswer];
 };
 //
 
-const brainEvenGame = () => gamesLogic(task, askAndRightAnswer);
+const brainEvenGame = () => gamesLogic(task, questionAndRightAnswer);
 
 export default brainEvenGame;

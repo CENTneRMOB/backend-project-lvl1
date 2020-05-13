@@ -6,25 +6,21 @@ import {
 const task = 'What number is missing in the progression?';
 //
 
-// generate random string(askingFunc)
+// generate random string and export [question, rightAnswer]
 const getRandomString = () => {
-  const arr = [];
-  arr[0] = getRandomNumber(1, 15);
+  const firstElement = getRandomNumber(1, 15);
+  const arrayOfElements = [firstElement];
+  const lengthOfArray = 10;
   const stepOfString = getRandomNumber(1, 15);
-  const hideElement = getRandomNumber(0, 9);
-  let res = arr[0];
-  for (let i = 1; i < 10; i += 1) {
-    arr[i] = res + stepOfString;
-    res = arr[i];
+  const hiddenElement = getRandomNumber(0, 9);
+  for (let i = 1; i < lengthOfArray; i += 1) {
+    const currentElement = firstElement + stepOfString * i;
+    arrayOfElements.push(currentElement);
   }
-  const rightAnswer = String(arr[hideElement]);
-  arr[hideElement] = '..';
-  let ask = '';
-  // eslint-disable-next-line no-restricted-syntax
-  for (const item of arr) {
-    ask += `${item} `;
-  }
-  return [ask.trim(), rightAnswer];
+  const rightAnswer = String(arrayOfElements[hiddenElement]);
+  arrayOfElements[hiddenElement] = '..';
+  const question = arrayOfElements.join(' ');
+  return [question, rightAnswer];
 };
 //
 
