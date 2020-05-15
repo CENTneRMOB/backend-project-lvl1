@@ -1,33 +1,23 @@
-import {
-  gamesLogic, getRandomNumber,
-} from '../src/index.js';
+import gamesLogic from '../src/index.js';
+import getRandomNumber from '../src/utils.js';
 
 // game task
 const task = 'What is the result of the expression?';
 //
 
-// generate random expression(askingFunc)
-const getRandomExpression = () => {
-  const operations = ['+', '-', '*'];
-  const randomOperation = operations[getRandomNumber(0, operations.length - 1)];
-  const firstNumberForExpression = getRandomNumber(1, 25);
-  const secondNumberForExpression = getRandomNumber(1, 25);
-  return [firstNumberForExpression, randomOperation, secondNumberForExpression];
-};
-//
 
 // correction check func
-const calc = (expression) => {
+const calc = (num1, num2, operation) => {
   let result;
-  switch (expression[1]) {
+  switch (operation) {
     case '+':
-      result = expression[0] + expression[2];
+      result = num1 + num2;
       break;
     case '-':
-      result = expression[0] - expression[2];
+      result = num1 - num2;
       break;
     case '*':
-      result = expression[0] * expression[2];
+      result = num1 * num2;
       break;
     default:
       result = false;
@@ -36,15 +26,18 @@ const calc = (expression) => {
 };
   //
 
-// export data
-const questionAndRightAnswer = () => {
-  const expression = getRandomExpression();
-  const question = expression.join(' ');
-  const rightAnswer = String(calc(expression));
+// export data and get the expression
+const getQuestionAndRightAnswer = () => {
+  const operations = ['+', '-', '*'];
+  const randomOperation = operations[getRandomNumber(0, operations.length - 1)];
+  const firstNumOfExpression = getRandomNumber(1, 25);
+  const secondNumOfExpression = getRandomNumber(1, 25);
+  const question = `${firstNumOfExpression} ${randomOperation} ${secondNumOfExpression}`;
+  const rightAnswer = String(calc(firstNumOfExpression, secondNumOfExpression, randomOperation));
   return [question, rightAnswer];
 };
 //
 
-const brainCalcGame = () => gamesLogic(task, questionAndRightAnswer);
+const startBrainCalcGame = () => gamesLogic(task, getQuestionAndRightAnswer);
 
-export default brainCalcGame;
+export default startBrainCalcGame;

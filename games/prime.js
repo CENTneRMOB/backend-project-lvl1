@@ -1,6 +1,5 @@
-import {
-  gamesLogic, getRandomNumber,
-} from '../src/index.js';
+import gamesLogic from '../src/index.js';
+import getRandomNumber from '../src/utils.js';
 
 // game task
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -12,7 +11,7 @@ const isPrime = (num) => {
     return false;
   }
   let div = 2;
-  while (div < num) {
+  while (div <= num / 2) {
     if (num % div === 0) {
       return false;
     }
@@ -23,13 +22,13 @@ const isPrime = (num) => {
 //
 
 // export data
-const questionAndRightAnswer = () => {
+const getQuestionAndRightAnswer = () => {
   const question = getRandomNumber(1, 3572);
   const rightAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, rightAnswer];
 };
 //
 
-const brainPrimeGame = () => gamesLogic(task, questionAndRightAnswer);
+const startBrainPrimeGame = () => gamesLogic(task, getQuestionAndRightAnswer);
 
-export default brainPrimeGame;
+export default startBrainPrimeGame;

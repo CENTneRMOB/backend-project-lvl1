@@ -1,6 +1,5 @@
-import {
-  gamesLogic, getRandomNumber,
-} from '../src/index.js';
+import gamesLogic from '../src/index.js';
+import getRandomNumber from '../src/utils.js';
 
 // game task
 const task = 'Find the greatest common divisor of given numbers.';
@@ -20,7 +19,7 @@ const getGreatestCommonDivider = (num1, num2) => {
 //
 
 // export data
-const questionAndRightAnswer = () => {
+const getQuestionAndRightAnswer = () => {
   const firstNumber = getRandomNumber(1, 100);
   const secondNumber = getRandomNumber(1, 100);
   const question = `${firstNumber} ${secondNumber}`;
@@ -29,6 +28,6 @@ const questionAndRightAnswer = () => {
 };
 //
 
-const brainGcdGame = () => gamesLogic(task, questionAndRightAnswer);
+const startBrainGcdGame = () => gamesLogic(task, getQuestionAndRightAnswer);
 
-export default brainGcdGame;
+export default startBrainGcdGame;

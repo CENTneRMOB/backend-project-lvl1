@@ -1,6 +1,5 @@
-import {
-  gamesLogic, getRandomNumber,
-} from '../src/index.js';
+import gamesLogic from '../src/index.js';
+import getRandomNumber from '../src/utils.js';
 
 // game task
 const task = 'What number is missing in the progression?';
@@ -8,13 +7,13 @@ const task = 'What number is missing in the progression?';
 
 // generate random string and export [question, rightAnswer]
 const getRandomString = () => {
-  const firstElement = getRandomNumber(1, 15);
-  const arrayOfElements = [firstElement];
-  const lengthOfArray = 10;
+  const arrayOfElements = [];
+  const elementsCount = 10;
+  const startOfArray = getRandomNumber(1, 15);
   const stepOfString = getRandomNumber(1, 15);
-  const hiddenElement = getRandomNumber(0, 9);
-  for (let i = 1; i < lengthOfArray; i += 1) {
-    const currentElement = firstElement + stepOfString * i;
+  const hiddenElement = getRandomNumber(0, elementsCount - 1);
+  for (let i = 0; i < elementsCount; i += 1) {
+    const currentElement = startOfArray + stepOfString * i;
     arrayOfElements.push(currentElement);
   }
   const rightAnswer = String(arrayOfElements[hiddenElement]);
@@ -24,6 +23,6 @@ const getRandomString = () => {
 };
 //
 
-const brainPrgGame = () => gamesLogic(task, getRandomString);
+const startBrainPrgGame = () => gamesLogic(task, getRandomString);
 
-export default brainPrgGame;
+export default startBrainPrgGame;
