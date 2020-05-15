@@ -13,24 +13,24 @@ This package consists of five games for command line interface, which made for y
 
 ## How to install
 1. Clone:
-    <$ git clone https://github.com/CENTneRMOB/backend-project-lvl1.git>
-    or download tis package.
+    $ git clone https://github.com/CENTneRMOB/backend-project-lvl1.git
+or download this package.
 2. In the main directory of the package:
-    <$ make install
-     $ npm link>
+    $ make install
+    $ npm link
 3. Play!
 
 ## How to run game
 1. For run Brain-even game:
-    <$ brain-even>
+    $ brain-even
 1. For run Brain-calc game:
-    <$ brain-calc>
+    $ brain-calc
 1. For run Brain-gcd game:
-    <$ brain-gcd>
+    $ brain-gcd
 1. For run Brain-progression game:
-    <$ brain-progression>
+    $ brain-progression
 1. For run Brain-prime game:
-    <$ brain-prime>
+    $ brain-prime
 
 ## How it works
 
