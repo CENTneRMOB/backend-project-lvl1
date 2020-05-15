@@ -51,14 +51,14 @@ or download this package.
 Gameplay of Brain-Even Game
 [![asciicast](https://asciinema.org/a/330568.svg)](https://asciinema.org/a/330568)
 
-Gameplay Brain-Calc Game
+Gameplay of Brain-Calc Game
 [![asciicast](https://asciinema.org/a/330570.svg)](https://asciinema.org/a/330570)
 
-Gameplay Brain-Gcd Game
+Gameplay of Brain-Gcd Game
 [![asciicast](https://asciinema.org/a/330572.svg)](https://asciinema.org/a/330572)
 
-Gameplay Brain-Progression Game
+Gameplay of Brain-Progression Game
 [![asciicast](https://asciinema.org/a/330573.svg)](https://asciinema.org/a/330573)
 
-Gameplay Brain-Prime Game
+Gameplay of Brain-Prime Game
 [![asciicast](https://asciinema.org/a/330574.svg)](https://asciinema.org/a/330574)
