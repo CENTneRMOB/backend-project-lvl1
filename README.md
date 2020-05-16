@@ -23,7 +23,7 @@ or download this package.
         $ make install
         $ npm link
 
-3. Play!
+3. Run the game and play!
 
 ## How to run game
 1. For run Brain-even game:
