@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
-// game logic
-const gamesLogic = (task, questionAndRightAnswer) => {
+// game engine
+const engine = (task, questionAndRightAnswer) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello,${userName}!`);
@@ -24,4 +24,4 @@ const gamesLogic = (task, questionAndRightAnswer) => {
 };
 //
 
-export default gamesLogic;
+export default engine;

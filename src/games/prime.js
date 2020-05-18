@@ -1,5 +1,5 @@
-import gamesLogic from '../src/index.js';
-import getRandomNumber from '../src/utils.js';
+import engine from '../index.js';
+import getRandomNumber from '../utils.js';
 
 // game task
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -29,6 +29,6 @@ const getQuestionAndRightAnswer = () => {
 };
 //
 
-const startBrainPrimeGame = () => gamesLogic(task, getQuestionAndRightAnswer);
+const startBrainPrimeGame = () => engine(task, getQuestionAndRightAnswer);
 
 export default startBrainPrimeGame;

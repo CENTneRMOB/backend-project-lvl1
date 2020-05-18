@@ -1,5 +1,5 @@
-import gamesLogic from '../src/index.js';
-import getRandomNumber from '../src/utils.js';
+import engine from '../index.js';
+import getRandomNumber from '../utils.js';
 
 // game task
 const task = 'Find the greatest common divisor of given numbers.';
@@ -28,6 +28,6 @@ const getQuestionAndRightAnswer = () => {
 };
 //
 
-const startBrainGcdGame = () => gamesLogic(task, getQuestionAndRightAnswer);
+const startBrainGcdGame = () => engine(task, getQuestionAndRightAnswer);
 
 export default startBrainGcdGame;

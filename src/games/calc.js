@@ -1,5 +1,5 @@
-import gamesLogic from '../src/index.js';
-import getRandomNumber from '../src/utils.js';
+import engine from '../index.js';
+import getRandomNumber from '../utils.js';
 
 // game task
 const task = 'What is the result of the expression?';
@@ -20,7 +20,7 @@ const calc = (num1, num2, operation) => {
       result = num1 * num2;
       break;
     default:
-      result = false;
+      return false;
   }
   return result;
 };
@@ -38,6 +38,6 @@ const getQuestionAndRightAnswer = () => {
 };
 //
 
-const startBrainCalcGame = () => gamesLogic(task, getQuestionAndRightAnswer);
+const startBrainCalcGame = () => engine(task, getQuestionAndRightAnswer);
 
 export default startBrainCalcGame;

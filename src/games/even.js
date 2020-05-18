@@ -1,5 +1,5 @@
-import gamesLogic from '../src/index.js';
-import getRandomNumber from '../src/utils.js';
+import engine from '../index.js';
+import getRandomNumber from '../utils.js';
 
 // game task
 const task = 'Answer "yes" if the number is even, otherwise answer "no"';
@@ -17,6 +17,6 @@ const getQuestionAndRightAnswer = () => {
 };
 //
 
-const startBrainEvenGame = () => gamesLogic(task, getQuestionAndRightAnswer);
+const startBrainEvenGame = () => engine(task, getQuestionAndRightAnswer);
 
 export default startBrainEvenGame;
