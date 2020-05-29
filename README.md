@@ -48,7 +48,7 @@ or download this package.
 
 ## How it works
 
-[asciicast](https://asciinema.org/a/330568 "Gameplay of Brain-Even Game")
+[Gameplay of Brain-Even Game](https://asciinema.org/a/330568 "Brain-Even Game example")
 
 Gameplay of Brain-Calc Game
 [![asciicast](https://asciinema.org/a/330570.svg)](https://asciinema.org/a/330570)
