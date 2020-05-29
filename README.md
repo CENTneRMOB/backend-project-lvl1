@@ -50,14 +50,10 @@ or download this package.
 
 [Gameplay of Brain-Even Game](https://asciinema.org/a/330568 "Brain-Even Game example")
 
-Gameplay of Brain-Calc Game
-[![asciicast](https://asciinema.org/a/330570.svg)](https://asciinema.org/a/330570)
+[Gameplay of Brain-Calc Game](https://asciinema.org/a/330570 "Brain-Calc Game example")
 
-Gameplay of Brain-Gcd Game
-[![asciicast](https://asciinema.org/a/330572.svg)](https://asciinema.org/a/330572)
+[Gameplay of Brain-Gcd Game](https://asciinema.org/a/330572 "Brain-Gcd Game example")
 
-Gameplay of Brain-Progression Game
-[![asciicast](https://asciinema.org/a/330573.svg)](https://asciinema.org/a/330573)
+[Gameplay of Brain-Progression Game](https://asciinema.org/a/330573 "Brain-Progression Game example")
 
-Gameplay of Brain-Prime Game
-[![asciicast](https://asciinema.org/a/330574.svg)](https://asciinema.org/a/330574)
+[Gameplay of Brain-Prime Game](https://asciinema.org/a/330574 "Brain-Prime Game example")
